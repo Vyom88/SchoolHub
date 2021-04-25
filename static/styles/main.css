@@ -1,0 +1,89 @@
+.Blank {
+    padding: 5%;
+    font-size: 700%;
+    font-family: 'Cormorant Garamond', serif;
+}
+#space {
+    height: 60px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.__form {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+}
+#sub {
+    font-size: 30px;
+    font-family: 'Cormorant Garamond', serif;
+}
+#box {
+    height: 80px;
+    font-size: 20px;
+    font-family: 'Cormorant Garamond', serif;
+}
+#signUpButton {
+    font-size: 200%;
+    font-family: 'Cormorant Garamond', serif;
+    padding-right: 10%;
+    padding-left: 10%;
+    background-color: rgb(17, 44, 84);
+    color: white;
+}
+#HEADER {
+    background-color: rgb(5, 27, 59);
+    font-family: 'Cormorant Garamond', serif;
+} 
+
+.DoNotDeleteThis {
+  height: 120px;
+}
+
+.sr-only {
+    background-color: rgb(17, 44, 84);
+    color: white;
+    display: inline-block;
+    padding: 16px;
+    font-size: 16px;
+    font-family: 'Cormorant Garamond', serif;
+    width: 400px;
+    border: none;
+}
+.dropdown {
+  margin: auto;
+  margin-bottom: 4%;
+  position: relative;
+  width: 30%;
+  max-width: 400px;
+  /* background-color: rgb(17, 44, 84); */
+  color: rgb(0, 0, 0);
+}
+
+
+.form-control {
+  display: block;
+  position: relative;
+  margin-top: 10%;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(17, 44, 84);
+  z-index: 1;
+}
+.form-control option {
+  color: black;
+  padding: 12px 16px;   
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: rgb(17, 44, 84);}
+
+.container {
+    align-content: center;
+    font-family: 'Cormorant Garamond', serif;
+}

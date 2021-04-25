@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SchoolHub</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/myclubs.css') }}">
+</head>
+  <body>
+    <form method="post">
+	<button id="homebutton" type = "submit" name="button" value="home" style="background-color: transparent; border: transparent; color: white; font-size: 20px; position: absolute; margin: 10px;">Home</button>
+    <div class="text-center"> 
+      <div class="bg-primary" id="HEADER">
+         <h1 class="Blank"> My Clubs </h1>
+      </div>	
+		</div>
+    <div class="container"> 
+			<div class="card" style="width: 100%;">
+			  <div class="card-body">
+			    <h5 class="card-title" id="AnnouncementsTitle"> Your Clubs</h5>
+           <div>
+            <div>
+              {% for club in yourClubs %}
+              <p id="myClubsListItem" class="Club_name"> {{club.name}} • {{club.description}} </p>
+                <button type="submit" id="myClubsListItem" class="btn btn-success" name="button" value={{club.name}}>View</button> <br>
+              {% endfor %}
+            </div>
+          </div>
+			  </div>	
+			</div>
+    </div>
+          <div> 
+            <div class="form-group">
+              <label for="exampleInputEmail1"> Club name </label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter event title" name="email">
+            </div>
+        </div>
+       <div class="form-outline">
+        <label class="form-label" for="textAreaExample"> Club description </label>
+        <textarea class="form-control" placeholder="Enter description" id="textAreaExample" rows="10" name="description"></textarea>
+        <div class = "addbutton">
+          <button type="submit" id="but" class="btn btn-primary" name="button" value="Add">Add</button>
+          </div>
+      </form> 
+      
+     <div class="container"> 
+      <div class="card" style="width: 100%;">
+        <div class="card-body">
+          {% if False %}
+            <h5 class="card-title" id="AnnouncementsTitle"> Browse All Clubs</h5>
+          <ol>
+          </div>
+            <div>
+              {% for club in allClubs %}
+                <p id="myClubsListItem" class="Club_name"> {{club.name}} • {{club.description}} </p>
+                <button type="submit" id="myClubsListItem" class="btn btn-success" name="button" value="join">Join</button> 
+              {% endfor %}
+            </div>
+          </ol>
+          {% endif %}
+        </div> 
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  </body>
+</html>

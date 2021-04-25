@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SchoolHub</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/main.css') }}">
+</head>
+    <div class="text-center"> 
+      <div class="bg-primary" id="HEADER">
+         <h1 class="Blank"> SchoolHub </h1>
+      </div>
+    </div>
+    <form method="post">
+      <div class="dropdown">  
+        <div class="dropp"> 
+          <label class="sr-only" for="district" style="color: white;">Select Your District</label>
+          <select class="form-control" name="district">
+            {% for district in districts %}
+            {% if district["name: "] == "Toronto District School Board" %}
+              <option style="color: black;" class="district" selected>{{district["name: "]}}</option>
+            {% endif %}
+            {% if district["name: "] != "Toronto District School Board" %}
+              <option style="color: black;" class="district" >{{district["name: "]}}</option>
+            {% endif %}
+            {% endfor %}
+          </select>
+          </div>
+      
+    <div>  
+      <div > 
+        <label class="sr-only" for="school" style="color: white;">Select Your School</label>
+        <select class="form-control" name="school">
+          {% for school in schools %} 
+          {% if school["name: "] == "SATEC @ WA Porter" %}
+            <option style="color: black;" class="school" selected>{{school["name: "]}}</option>
+          {% endif %}
+          {% if school["name: "] != "SATEC @ WA Porter" %}
+            <option style="color: black;" class="school">{{school["name: "]}}</option>
+          {% endif %}
+          {% endfor %}
+        </select>
+        </div>
+    </div>
+  </div>
+    <div class="__form">
+      <div class="_form">
+            <div class="form-group">
+              <div id="space"> </div>
+              <label id="sub" for="exampleInputEmail1"> Email </label>
+              <br><br>
+              <input type="email" class="email" id="box" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+              <p style="color: red;"> Reminder please be aware that SchoolHub's Software only works with Toronto District School Board email. Format of email may follow as Name.lastname@student.tdsb.on.ca (for Students) or Name.lastname@tdsb.on.ca (for Teachers) </p>              
+            </div>
+            <div class="form-group">
+              <label id="sub" for="exampleInputPassword1">Password</label>
+              <br><br>
+              <input type="password" class="password" id="box" placeholder="Password" name="password">
+            </div>
+    </div>
+    <div class="container"> 
+        <button type="submit" id="signUpButton" class="btn btn-dark"> Login</button>
+    </div><div class="DoNotDeleteThis"></div>
+  </div>
+  </form>
+    <script src="{{url_for('static', filename='js/start.js') }}"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" 
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
+  </script> 
+  </body>
+</html> 
